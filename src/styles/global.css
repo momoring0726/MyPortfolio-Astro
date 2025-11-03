@@ -14,17 +14,18 @@
   --color-rust: #78290f;
   --color-bgAlt: #fdfaf5;
 
+  /* This is the animation for the Hero BG */
+  --animation-gradient: animateGradient 25s ease infinite;
+  /* This is the animation for the Hero Button */
   --animation-pulse: animatePulse 2s infinite;
-
-  --animation-gradient: animateGradient 10s ease-in-out infinite;
 
   @keyframes animateGradient {
     0%,
     100% {
-      background-color: var(--color-nightSky);
+      background-position: 0% 50%;
     }
     50% {
-      background-color: var(--color-deepTeal);
+      background-position: 100% 50%;
     }
   }
 
