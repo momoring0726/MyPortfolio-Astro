@@ -14,16 +14,17 @@
   --color-rust: #78290f;
   --color-bgAlt: #fdfaf5;
 
-  --animation-gradient: animateGradient 25s ease infinite;
   --animation-pulse: animatePulse 2s infinite;
+
+  --animation-gradient: animateGradient 10s ease-in-out infinite;
 
   @keyframes animateGradient {
     0%,
     100% {
-      background-position: 0% 50%;
+      background-color: var(--color-nightSky);
     }
     50% {
-      background-position: 100% 50%;
+      background-color: var(--color-deepTeal);
     }
   }
 
