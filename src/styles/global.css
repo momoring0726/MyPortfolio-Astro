@@ -3,7 +3,7 @@
 /* 1. Import all of Tailwind's styles */
 @import "tailwindcss";
 
-/* 2. Define all of your custom theme values */
+/* 2. Define all of your custom theme values (colors and fonts only) */
 @theme {
   --font-poppins: "Poppins", "sans-serif";
 
@@ -14,34 +14,38 @@
   --color-rust: #78290f;
   --color-bgAlt: #fdfaf5;
 
-  /* This is the animation for the Hero BG */
-  --animation-gradient: animateGradient 25s ease infinite;
-  /* This is the animation for the Hero Button */
-  --animation-pulse: animatePulse 2s infinite;
+  /*
+    NOTE: Animation variables have been moved out of @theme
+    to ensure they are processed correctly.
+  */
+}
 
-  @keyframes animateGradient {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+/* 3. Define Keyframes (now outside the @theme block) */
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 0%;
   }
-
-  @keyframes animatePulse {
-    0%,
-    100% {
-      box-shadow: 0 0 0 0 rgba(255, 125, 0, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(255, 125, 0, 0);
-    }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
-/* 3. Add your custom nav-link underline style */
+@keyframes animatePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 125, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 125, 0, 0);
+  }
+}
+
+/* 4. Add your custom utilities */
 @layer utilities {
+  /* Nav-link styles */
   .nav-link {
     position: relative;
     padding-bottom: 5px;
@@ -55,7 +59,7 @@
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: var(--color-orange); /* Use your new custom color */
+    background: var(--color-orange);
     transition: width 0.3s ease;
   }
   @media (min-width: 1024px) {
@@ -67,5 +71,15 @@
   .nav-link:hover::after,
   .nav-link.active::after {
     width: calc(100% - 2rem); /* Matches padding-x-4 */
+  }
+
+  /*
+    THIS IS THE FIX:
+    We explicitly define the .animate-gradient class here,
+    combining the background size and the animation properties.
+  */
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: animateGradient 8s ease infinite;
   }
 }
