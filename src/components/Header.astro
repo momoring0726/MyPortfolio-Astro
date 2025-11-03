@@ -1,0 +1,75 @@
+---
+// src/components/Header.astro
+---
+
+<header
+  class="fixed top-0 z-50 w-full bg-nightSky/85 shadow-lg backdrop-blur-lg"
+>
+  <nav
+    class="container mx-auto flex max-w-6xl items-center justify-between px-4 py-4"
+  >
+    <a href="#hero" class="text-xl font-bold text-cream">Mark Divinagracia</a>
+
+    <button
+      id="nav-toggle-btn"
+      type="button"
+      class="rounded-lg p-2 text-cream transition-colors hover:bg-white/10 lg:hidden"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+
+    <div
+      id="nav-menu"
+      class="absolute left-0 top-full hidden w-full flex-col bg-nightSky/85 backdrop-blur-lg lg:static lg:w-auto lg:flex-row lg:bg-transparent lg:backdrop-blur-none"
+    >
+      <ul
+        class="flex flex-col items-center space-y-2 py-4 lg:flex-row lg:space-x-4 lg:space-y-0 lg:py-0"
+      >
+        <li>
+          <a href="#hero" class="nav-link block px-4 py-2 text-cream">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link block px-4 py-2 text-cream">About</a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-link block px-4 py-2 text-cream"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="nav-link block px-4 py-2 text-cream"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById("nav-toggle-btn");
+  const menu = document.getElementById("nav-menu");
+
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => {
+      const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+      menu.classList.toggle("hidden");
+      toggleBtn.setAttribute("aria-expanded", String(!isExpanded));
+    });
+  }
+</script>

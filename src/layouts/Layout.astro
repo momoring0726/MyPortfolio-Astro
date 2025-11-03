@@ -1,0 +1,56 @@
+---
+// src/layouts/Layout.astro
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-poppins bg-bgAlt text-nightSky antialiased">
+    <slot />
+    <script>
+      // This replaces the createIntersectionObserver function from script.js
+      function setupFadeInObserver() {
+        const elements = document.querySelectorAll(".fade-in");
+        if (elements.length === 0) return;
+
+        const observer = new IntersectionObserver(
+          (entries, observerInstance) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("opacity-100", "translate-y-0");
+                entry.target.classList.remove("opacity-0", "translate-y-8");
+                observerInstance.unobserve(entry.target); // Stop observing after animation
+              }
+            });
+          },
+          { threshold: 0.1 }
+        ); // Trigger when 10% of the element is visible
+
+        elements.forEach((el) => observer.observe(el));
+      }
+
+      // Run the observer setup
+      setupFadeInObserver();
+      // Re-run on Astro's page navigation
+      document.addEventListener("astro:after-swap", setupFadeInObserver);
+    </script>
+  </body>
+</html>
