@@ -4,65 +4,54 @@
 
 <section id="contact" class="bg-white py-24">
   <div
-    class="fade-in container mx-auto max-w-3xl px-4 opacity-0 transition-all duration-700 ease-out translate-y-8"
+    class="fade-in container mx-auto max-w-3xl px-4 text-center opacity-0 transition-all duration-700 ease-out translate-y-8"
   >
     <h2
       class="relative z-0 mb-10 inline-block text-center text-4xl font-bold text-rust"
     >
-      <span class="relative z-10">Contact Me</span>
+      <span class="relative z-10">Get In Touch</span>
       <span
         class="absolute -bottom-1 left-0 z-0 h-4 w-full -skew-x-12 bg-orange/30"
       ></span>
     </h2>
 
-    <form
-      action="https://formspree.io/f/yourformid"
-      method="POST"
-      class="mx-auto w-full max-w-lg"
+    <p class="mx-auto mb-12 max-w-lg text-lg text-nightSky/80">
+      I'm currently available for new opportunities. If you have a project in
+      mind, a question, or just want to say hi, feel free to reach out.
+    </p>
+
+    <div
+      class="mx-auto flex max-w-sm flex-col space-y-8 sm:max-w-none sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-16"
     >
-      <div class="mb-6">
-        <label for="name" class="mb-2 block font-medium text-nightSky"
-          >Name</label
-        >
-        <input
-          type="text"
-          id="name"
-          name="name"
-          class="w-full rounded-t-lg border-b-2 border-gray-300 bg-bgAlt p-3 transition-all duration-300 focus:border-deepTeal focus:bg-white focus:outline-none focus:ring-0"
-          required
-        />
+      <div class="flex flex-col items-center sm:flex-row">
+        <div class="mb-3 sm:mb-0">
+          <i class="fa-solid fa-envelope h-8 w-8 text-deepTeal"></i>
+        </div>
+        <div class="text-center sm:ml-4 sm:text-left">
+          <h3 class="text-xl font-semibold text-nightSky">Email</h3>
+          <a
+            href="mailto:your.email@example.com"
+            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
+          >
+            your.email@example.com
+          </a>
+        </div>
       </div>
-      <div class="mb-6">
-        <label for="email" class="mb-2 block font-medium text-nightSky"
-          >Email</label
-        >
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="w-full rounded-t-lg border-b-2 border-gray-300 bg-bgAlt p-3 transition-all duration-300 focus:border-deepTeal focus:bg-white focus:outline-none focus:ring-0"
-          required
-        />
+
+      <div class="flex flex-col items-center sm:flex-row">
+        <div class="mb-3 sm:mb-0">
+          <i class="fa-solid fa-phone h-8 w-8 text-deepTeal"></i>
+        </div>
+        <div class="text-center sm:ml-4 sm:text-left">
+          <h3 class="text-xl font-semibold text-nightSky">Phone</h3>
+          <a
+            href="tel:+1234567890"
+            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
+          >
+            +1 (234) 567-890
+          </a>
+        </div>
       </div>
-      <div class="mb-8">
-        <label for="message" class="mb-2 block font-medium text-nightSky"
-          >Message</label
-        >
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          class="w-full rounded-t-lg border-b-2 border-gray-300 bg-bgAlt p-3 transition-all duration-300 focus:border-deepTeal focus:bg-white focus:outline-none focus:ring-0"
-          required></textarea>
-      </div>
-      <div class="text-center">
-        <button
-          type="submit"
-          class="inline-block rounded-full bg-gradient-to-r from-orange to-rust px-10 py-4 text-lg font-semibold text-cream shadow-lg transition-all hover:translate-y-[-5px] hover:scale-105 hover:shadow-2xl hover:shadow-orange/30 focus:outline-none focus:ring-2 focus:ring-orange/50"
-        >
-          Send
-        </button>
-      </div>
-    </form>
+    </div>
   </div>
 </section>

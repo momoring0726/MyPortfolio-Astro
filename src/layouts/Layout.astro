@@ -7,6 +7,9 @@ interface Props {
 const { title } = Astro.props;
 
 import "../styles/global.css";
+
+// This imports the Font Awesome CSS directly from node_modules
+import "@fortawesome/fontawesome-free/css/all.min.css";
 ---
 
 <!doctype html>
@@ -30,19 +33,19 @@ import "../styles/global.css";
       function setupFadeInObserver() {
         const elements = document.querySelectorAll(".fade-in");
         if (elements.length === 0) return;
-
         const observer = new IntersectionObserver(
           (entries, observerInstance) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 entry.target.classList.add("opacity-100", "translate-y-0");
                 entry.target.classList.remove("opacity-0", "translate-y-8");
+                // --- THIS LINE IS NOW FIXED ---
                 observerInstance.unobserve(entry.target); // Stop observing after animation
               }
             });
           },
-          { threshold: 0.1 }
-        ); // Trigger when 10% of the element is visible
+          { threshold: 0.1 } // Trigger when 10% of the element is visible
+        );
 
         elements.forEach((el) => observer.observe(el));
       }
