@@ -7,11 +7,11 @@ const placeholderImg =
 ---
 
 <section id="about" class="bg-white py-24">
-  <div
-    class="fade-in container mx-auto max-w-6xl px-4 opacity-0 transition-all duration-700 ease-out translate-y-8"
-  >
+  <div class="container mx-auto max-w-6xl px-4">
     <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-      <div class="text-center lg:col-span-5 lg:text-left">
+      <div
+        class="fade-in text-center opacity-0 translate-y-8 transition-all duration-700 ease-out lg:col-span-5 lg:text-left"
+      >
         <div class="relative inline-block">
           <div
             class="absolute -left-4 -top-4 z-0 h-full w-full rounded-full border-4 border-deepTeal transition-transform duration-300 group-hover:scale-105"
@@ -27,7 +27,7 @@ const placeholderImg =
 
       <div class="lg:col-span-7">
         <h2
-          class="relative z-0 mb-6 inline-block text-center text-4xl font-bold text-rust lg:text-left"
+          class="fade-in relative z-0 mb-6 inline-block text-center text-4xl font-bold text-rust opacity-0 translate-y-8 transition-all duration-700 ease-out lg:text-left [transition-delay:150ms]"
         >
           <span class="relative z-10">About Me</span>
           <span
@@ -35,30 +35,31 @@ const placeholderImg =
           ></span>
         </h2>
 
-        <div class="space-y-4 text-lg text-nightSky/80">
+        <div
+          class="fade-in space-y-4 text-lg text-nightSky/80 opacity-0 translate-y-8 transition-all duration-700 ease-out [transition-delay:300ms]"
+        >
           <p>
-            I'm a passionate web developer who transforms complex ideas into
-            beautiful, user-friendly digital experiences. My journey into code
-            began with a fascination for creating interfaces that are both
-            functional and delightful to use.
+            I'm a web developer driven by the satisfaction of solving a complex
+            problem and watching an idea come to life on the screen. My primary
+            goal is to build digital experiences that are not just functional,
+            but also <strong>clean, fast, and responsive,</strong> with a strong
+            foundation in <strong>SEO</strong> to ensure they reach the right audience.
           </p>
           <p>
-            With a specialization in <strong>Front-End Development</strong>, I
-            excel in building responsive, high-performance websites using tools
-            like <strong>HTML, CSS, and JavaScript</strong>. I love the
-            challenge of turning a design into clean, maintainable code that
-            works flawlessly across all devices.
-          </p>
-          <p class="mb-6">
-            When I'm not coding, you can find me exploring new design trends or
-            contributing to open-source projects. Let's connect and build
-            something amazing!
+            To achieve this, I specialize in a modern frontend stack that
+            includes <strong
+              >JavaScript, TypeScript, Astro, and Tailwind CSS,</strong
+            >
+            built on the core of <strong> HTML & CSS.</strong> While my passion is
+            currently focused on creating outstanding user interfaces, I am actively
+            expanding my skills in backend development to grow into a well-rounded,
+            full-stack developer.
           </p>
         </div>
 
         <a
           href="#contact"
-          class="inline-block rounded-full bg-gradient-to-r from-orange to-rust px-8 py-3 font-semibold text-cream shadow-lg transition-all hover:translate-y-[-5px] hover:scale-105 hover:shadow-2xl hover:shadow-orange/30 focus:outline-none focus:ring-2 focus:ring-orange/50"
+          class="fade-in mt-6 inline-block rounded-full bg-gradient-to-r from-orange to-rust px-8 py-3 font-semibold text-cream shadow-lg opacity-0 translate-y-8 transition-all duration-700 ease-out hover:translate-y-[-5px] hover:scale-105 hover:shadow-2xl hover:shadow-orange/30 focus:outline-none focus:ring-2 focus:ring-orange/50 [transition-delay:450ms]"
         >
           Get In Touch
         </a>

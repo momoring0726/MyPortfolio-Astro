@@ -3,11 +3,9 @@
 ---
 
 <section id="contact" class="bg-white py-24">
-  <div
-    class="fade-in container mx-auto max-w-3xl px-4 text-center opacity-0 transition-all duration-700 ease-out translate-y-8"
-  >
+  <div class="container mx-auto max-w-4xl px-4 text-center">
     <h2
-      class="relative z-0 mb-10 inline-block text-center text-4xl font-bold text-rust"
+      class="fade-in relative z-0 mb-10 inline-block text-center text-4xl font-bold text-rust opacity-0 translate-y-8 transition-all duration-700 ease-out"
     >
       <span class="relative z-10">Get In Touch</span>
       <span
@@ -15,17 +13,23 @@
       ></span>
     </h2>
 
-    <p class="mx-auto mb-12 max-w-lg text-lg text-nightSky/80">
+    <p
+      class="fade-in mx-auto mb-16 max-w-lg text-lg text-nightSky/80 opacity-0 translate-y-8 transition-all duration-700 ease-out delay-150"
+    >
       I'm currently available for new opportunities. If you have a project in
       mind, a question, or just want to say hi, feel free to reach out.
     </p>
 
     <div
-      class="mx-auto flex max-w-sm flex-col space-y-8 sm:max-w-none sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-16"
+      class="mx-auto grid max-w-sm grid-cols-1 gap-x-8 gap-y-12 md:max-w-2xl md:grid-cols-2"
     >
-      <div class="flex flex-col items-center sm:flex-row">
-        <div class="mb-3 sm:mb-0">
-          <i class="fa-solid fa-envelope h-8 w-8 text-deepTeal"></i>
+      <div
+        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-300"
+      >
+        <div
+          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+        >
+          <i class="fa-solid fa-envelope text-5xl text-deepTeal"></i>
         </div>
         <div class="text-center sm:ml-4 sm:text-left">
           <h3 class="text-xl font-semibold text-nightSky">Email</h3>
@@ -38,9 +42,13 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center sm:flex-row">
-        <div class="mb-3 sm:mb-0">
-          <i class="fa-solid fa-phone h-8 w-8 text-deepTeal"></i>
+      <div
+        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-400"
+      >
+        <div
+          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+        >
+          <i class="fa-solid fa-phone text-5xl text-deepTeal"></i>
         </div>
         <div class="text-center sm:ml-4 sm:text-left">
           <h3 class="text-xl font-semibold text-nightSky">Phone</h3>
@@ -49,6 +57,48 @@
             class="text-lg text-nightSky/90 transition-colors hover:text-orange"
           >
             +1 (234) 567-890
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-500"
+      >
+        <div
+          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+        >
+          <i class="fa-brands fa-linkedin text-5xl text-deepTeal"></i>
+        </div>
+        <div class="text-center sm:ml-4 sm:text-left">
+          <h3 class="text-xl font-semibold text-nightSky">LinkedIn</h3>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
+          >
+            linkedin.com/in/yourusername
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-600"
+      >
+        <div
+          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+        >
+          <i class="fa-brands fa-github text-5xl text-deepTeal"></i>
+        </div>
+        <div class="text-center sm:ml-4 sm:text-left">
+          <h3 class="text-xl font-semibold text-nightSky">GitHub</h3>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
+          >
+            github.com/yourusername
           </a>
         </div>
       </div>
