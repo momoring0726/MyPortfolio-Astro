@@ -3,24 +3,39 @@
 
 // This placeholder is from your original HTML
 const placeholderImg = "../public/img/mwtd.jpg";
+
+// Extracted your tech stack for visual display
+const techStack = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Astro",
+  "Tailwind CSS",
+];
 ---
 
-<section id="about" class="bg-white py-24">
+<section id="about" class="bg-bgAlt py-24">
   <div class="container mx-auto max-w-6xl px-4">
     <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
       <div
         class="fade-in text-center opacity-0 translate-y-8 transition-all duration-700 ease-out lg:col-span-5 lg:text-left"
       >
-        <div class="relative inline-block">
+        <div class="relative mx-auto w-full max-w-[480px] lg:mx-0">
           <div
-            class="absolute -left-4 -top-4 z-0 h-full w-full rounded-full border-4 border-deepTeal transition-transform duration-300 group-hover:scale-105"
+            class="absolute -left-3 -top-3 z-0 h-full w-full rounded-2xl bg-deepTeal/20"
           >
           </div>
-          <img
-            src={placeholderImg}
-            alt="A professional photo of Mark Divinagracia"
-            class="relative z-10 h-auto w-full max-w-[350px] rounded-full shadow-lg"
-          />
+
+          <div
+            class="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-lg"
+          >
+            <img
+              src={placeholderImg}
+              alt="A professional photo of Mark Divinagracia"
+              class="h-full w-full object-cover object-top"
+            />
+          </div>
         </div>
       </div>
 
@@ -44,21 +59,38 @@ const placeholderImg = "../public/img/mwtd.jpg";
             but also <strong>clean, fast, and responsive,</strong> with a strong
             foundation in <strong>SEO</strong> to ensure they reach the right audience.
           </p>
-          <p>
-            To achieve this, I specialize in a modern frontend stack that
-            includes <strong
-              >JavaScript, TypeScript, Astro, and Tailwind CSS,</strong
-            >
-            built on the core of <strong> HTML & CSS.</strong> While my passion is
-            currently focused on creating outstanding user interfaces, I am actively
-            expanding my skills in backend development to grow into a well-rounded,
-            full-stack developer.
+        </div>
+
+        <div
+          class="fade-in mt-6 opacity-0 translate-y-8 transition-all duration-700 ease-out [transition-delay:450ms]"
+        >
+          <h3 class="text-xl font-semibold text-nightSky">
+            My Core Technologies
+          </h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {
+              techStack.map((tech) => (
+                <span class="rounded-full bg-deepTeal/10 px-4 py-1.5 text-sm font-semibold text-deepTeal">
+                  {tech}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <div
+          class="fade-in space-y-4 text-lg text-nightSky/80 opacity-0 translate-y-8 transition-all duration-700 ease-out [transition-delay:600ms]"
+        >
+          <p class="pt-4">
+            While my passion is currently focused on creating outstanding user
+            interfaces, I am actively expanding my skills in backend development
+            to grow into a well-rounded, full-stack developer.
           </p>
         </div>
 
         <a
           href="#contact"
-          class="fade-in mt-6 inline-block rounded-full bg-gradient-to-r from-orange to-rust px-8 py-3 font-semibold text-cream shadow-lg opacity-0 translate-y-8 transition-all duration-700 ease-out hover:translate-y-[-5px] hover:scale-105 hover:shadow-2xl hover:shadow-orange/30 focus:outline-none focus:ring-2 focus:ring-orange/50 [transition-delay:450ms]"
+          class="fade-in mt-6 inline-block rounded-full bg-gradient-to-r from-orange to-rust px-8 py-3 font-semibold text-cream shadow-lg opacity-0 translate-y-8 transition-all duration-700 ease-out hover:translate-y-[-5px] hover:scale-105 hover:shadow-2xl hover:shadow-orange/30 focus:outline-none focus:ring-2 focus:ring-orange/50 [transition-delay:750ms]"
         >
           Get In Touch
         </a>
