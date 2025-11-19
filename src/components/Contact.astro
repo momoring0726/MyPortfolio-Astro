@@ -22,64 +22,77 @@
     </div>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <button
-        id="email-btn"
-        data-email="markwyndltan@gmail.com"
-        class="fade-in group relative flex w-full cursor-pointerqv flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-300 border border-transparent hover:border-orange/20"
+      <div
+        class="fade-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300"
       >
-        <div
-          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
+        <button
+          id="email-btn"
+          data-email="markwyndltan@gmail.com"
+          class="group relative flex h-full w-full cursor-pointer flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-orange/20"
         >
-          <i class="fa-solid fa-envelope text-3xl"></i>
-        </div>
-        <h3 class="mb-2 text-xl font-bold text-nightSky">Email</h3>
-        <p class="text-center text-nightSky/70 break-all">
-          markwyndltan@gmail.com
-        </p>
+          <div
+            class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors duration-300 group-hover:bg-orange group-hover:text-cream"
+          >
+            <i class="fa-solid fa-envelope text-3xl"></i>
+          </div>
+          <h3 class="mb-2 text-xl font-bold text-nightSky">Email</h3>
+          <p class="text-center text-nightSky/70 break-all">
+            markwyndltan@gmail.com
+          </p>
 
-        <span
-          id="copy-status"
-          class="absolute bottom-3 text-xs font-bold text-orange opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        >
-          Click to Copy
-        </span>
-      </button>
+          <span
+            id="copy-status"
+            class="absolute bottom-3 text-xs font-bold text-orange opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            Click to Copy
+          </span>
+        </button>
+      </div>
 
-      <a
-        href="https://www.facebook.com/yourusername"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="fade-in group relative flex flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-400 border border-transparent hover:border-orange/20"
+      <div
+        class="fade-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-400"
       >
-        <div
-          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
+        <a
+          href="https://www.facebook.com/ampugeko"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative flex h-full w-full flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-orange/20"
         >
-          <i class="fa-brands fa-facebook text-3xl"></i>
-        </div>
-        <h3 class="mb-2 text-xl font-bold text-nightSky">Facebook</h3>
-        <p class="text-center text-nightSky/70">Mark Divinagracia</p>
-      </a>
+          <div
+            class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors duration-300 group-hover:bg-orange group-hover:text-cream"
+          >
+            <i class="fa-brands fa-facebook text-3xl"></i>
+          </div>
+          <h3 class="mb-2 text-xl font-bold text-nightSky">Facebook</h3>
+          <p class="text-center text-nightSky/70">
+            Mark Wyndl Tan Divinagracia
+          </p>
+        </a>
+      </div>
 
-      <a
-        href="https://github.com/momoring0726"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="fade-in group relative flex flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-500 border border-transparent hover:border-orange/20"
+      <div
+        class="fade-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-500"
       >
-        <div
-          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
+        <a
+          href="https://github.com/momoring0726"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative flex h-full w-full flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-orange/20"
         >
-          <i class="fa-brands fa-github text-3xl"></i>
-        </div>
-        <h3 class="mb-2 text-xl font-bold text-nightSky">GitHub</h3>
-        <p class="text-center text-nightSky/70">momoring0726</p>
-      </a>
+          <div
+            class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors duration-300 group-hover:bg-orange group-hover:text-cream"
+          >
+            <i class="fa-brands fa-github text-3xl"></i>
+          </div>
+          <h3 class="mb-2 text-xl font-bold text-nightSky">GitHub</h3>
+          <p class="text-center text-nightSky/70">momoring0726</p>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <script>
-  // Script to handle "Click to Copy" functionality
   const emailBtn = document.getElementById("email-btn");
   const copyStatus = document.getElementById("copy-status");
 
@@ -91,29 +104,21 @@
         navigator.clipboard
           .writeText(email)
           .then(() => {
-            // Success Feedback
             copyStatus.textContent = "Copied!";
-            copyStatus.classList.remove("opacity-0"); // Force visible
+            copyStatus.classList.remove("opacity-0");
 
-            // --- FIX: Explicitly remove orange, add green ---
             copyStatus.classList.remove("text-orange");
             copyStatus.classList.add("text-green-600");
 
-            // Reset after 2 seconds
             setTimeout(() => {
               copyStatus.textContent = "Click to Copy";
-
-              // --- FIX: Revert colors back ---
               copyStatus.classList.remove("text-green-600");
               copyStatus.classList.add("text-orange");
-
-              // Return to default hidden state (hover will still show it)
               copyStatus.classList.add("opacity-0");
             }, 2000);
           })
           .catch((err) => {
             console.error("Failed to copy:", err);
-            // Fallback: try to open mail client if copy fails
             window.location.href = `mailto:${email}`;
           });
       }
