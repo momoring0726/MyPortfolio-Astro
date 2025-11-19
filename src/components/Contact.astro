@@ -2,106 +2,121 @@
 // src/components/Contact.astro
 ---
 
-<section id="contact" class="bg-bgAlt py-24">
-  <div class="container mx-auto max-w-4xl px-4 text-center">
-    <h2
-      class="fade-in relative z-0 mb-10 inline-block text-center text-4xl font-bold text-rust opacity-0 translate-y-8 transition-all duration-700 ease-out"
-    >
-      <span class="relative z-10">Get In Touch</span>
-      <span
-        class="absolute -bottom-1 left-0 z-0 h-4 w-full -skew-x-12 bg-orange/30"
-      ></span>
-    </h2>
+<section id="contact" class="bg-bgAltEy py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="mb-8 text-center">
+      <h2
+        class="fade-in relative z-0 mb-6 inline-block text-4xl font-bold text-rust opacity-0 translate-y-8 transition-all duration-700 ease-out"
+      >
+        <span class="relative z-10">Let's Connect</span>
+        <span
+          class="absolute -bottom-1 left-0 z-0 h-4 w-full -skew-x-12 bg-orange/30"
+        ></span>
+      </h2>
+      <p
+        class="fade-in mx-auto max-w-2xl text-lg text-nightSky/80 opacity-0 translate-y-8 transition-all duration-700 ease-out delay-150"
+      >
+        I'm always open to discussing new projects, creative ideas, or
+        opportunities to be part of your vision.
+      </p>
+    </div>
 
-    <p
-      class="fade-in mx-auto mb-16 max-w-lg text-lg text-nightSky/80 opacity-0 translate-y-8 transition-all duration-700 ease-out delay-150"
-    >
-      I'm currently available for new opportunities. If you have a project in
-      mind, a question, or just want to say hi, feel free to reach out.
-    </p>
-
-    <div
-      class="mx-auto grid max-w-sm grid-cols-1 gap-x-8 gap-y-12 md:max-w-2xl md:grid-cols-2"
-    >
-      <div
-        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-300"
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <button
+        id="email-btn"
+        data-email="markwyndltan@gmail.com"
+        class="fade-in group relative flex w-full cursor-pointerqv flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-300 border border-transparent hover:border-orange/20"
       >
         <div
-          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
         >
-          <i class="fa-solid fa-envelope text-5xl text-deepTeal"></i>
+          <i class="fa-solid fa-envelope text-3xl"></i>
         </div>
-        <div class="text-center sm:ml-4 sm:text-left">
-          <h3 class="text-xl font-semibold text-nightSky">Email</h3>
-          <a
-            href="mailto:markwyndltan@gmail.com"
-            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
-          >
-            markwyndltan@gmail.com
-          </a>
-        </div>
-      </div>
+        <h3 class="mb-2 text-xl font-bold text-nightSky">Email</h3>
+        <p class="text-center text-nightSky/70 break-all">
+          markwyndltan@gmail.com
+        </p>
 
-      <div
-        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-400"
+        <span
+          id="copy-status"
+          class="absolute bottom-3 text-xs font-bold text-orange opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        >
+          Click to Copy
+        </span>
+      </button>
+
+      <a
+        href="https://www.facebook.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fade-in group relative flex flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-400 border border-transparent hover:border-orange/20"
       >
         <div
-          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
         >
-          <i class="fa-solid fa-phone text-5xl text-deepTeal"></i>
+          <i class="fa-brands fa-facebook text-3xl"></i>
         </div>
-        <div class="text-center sm:ml-4 sm:text-left">
-          <h3 class="text-xl font-semibold text-nightSky">Phone</h3>
-          <a
-            href="tel:+1234567890"
-            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
-          >
-            +1 (234) 567-890
-          </a>
-        </div>
-      </div>
+        <h3 class="mb-2 text-xl font-bold text-nightSky">Facebook</h3>
+        <p class="text-center text-nightSky/70">Mark Divinagracia</p>
+      </a>
 
-      <div
-        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-500"
+      <a
+        href="https://github.com/momoring0726"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fade-in group relative flex flex-col items-center rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 delay-500 border border-transparent hover:border-orange/20"
       >
         <div
-          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
+          class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-deepTeal/10 text-deepTeal transition-colors group-hover:bg-orange group-hover:text-cream"
         >
-          <i class="fa-brands fa-linkedin text-5xl text-deepTeal"></i>
+          <i class="fa-brands fa-github text-3xl"></i>
         </div>
-        <div class="text-center sm:ml-4 sm:text-left">
-          <h3 class="text-xl font-semibold text-nightSky">LinkedIn</h3>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
-          >
-            linkedin.com/in/yourusername
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="fade-in flex flex-col items-center opacity-0 translate-y-8 transition-all duration-700 ease-out sm:flex-row delay-600"
-      >
-        <div
-          class="mb-3 flex h-12 w-12 shrink-0 items-center justify-center sm:mb-0"
-        >
-          <i class="fa-brands fa-github text-5xl text-deepTeal"></i>
-        </div>
-        <div class="text-center sm:ml-4 sm:text-left">
-          <h3 class="text-xl font-semibold text-nightSky">GitHub</h3>
-          <a
-            href="https://github.com/momoring0726"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-lg text-nightSky/90 transition-colors hover:text-orange"
-          >
-            github.com/momoring0726
-          </a>
-        </div>
-      </div>
+        <h3 class="mb-2 text-xl font-bold text-nightSky">GitHub</h3>
+        <p class="text-center text-nightSky/70">momoring0726</p>
+      </a>
     </div>
   </div>
 </section>
+
+<script>
+  // Script to handle "Click to Copy" functionality
+  const emailBtn = document.getElementById("email-btn");
+  const copyStatus = document.getElementById("copy-status");
+
+  if (emailBtn && copyStatus) {
+    emailBtn.addEventListener("click", () => {
+      const email = emailBtn.getAttribute("data-email");
+
+      if (email) {
+        navigator.clipboard
+          .writeText(email)
+          .then(() => {
+            // Success Feedback
+            copyStatus.textContent = "Copied!";
+            copyStatus.classList.remove("opacity-0"); // Force visible
+
+            // --- FIX: Explicitly remove orange, add green ---
+            copyStatus.classList.remove("text-orange");
+            copyStatus.classList.add("text-green-600");
+
+            // Reset after 2 seconds
+            setTimeout(() => {
+              copyStatus.textContent = "Click to Copy";
+
+              // --- FIX: Revert colors back ---
+              copyStatus.classList.remove("text-green-600");
+              copyStatus.classList.add("text-orange");
+
+              // Return to default hidden state (hover will still show it)
+              copyStatus.classList.add("opacity-0");
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Failed to copy:", err);
+            // Fallback: try to open mail client if copy fails
+            window.location.href = `mailto:${email}`;
+          });
+      }
+    });
+  }
+</script>
