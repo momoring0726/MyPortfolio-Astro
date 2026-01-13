@@ -50,3 +50,53 @@ import { projectsData } from "../data/projects.ts";
     </div>
   </div>
 </section>
+
+<script>
+  // src/components/Projects.astro
+  document.addEventListener("DOMContentLoaded", () => {
+    const projects = document.querySelectorAll(".group");
+
+    // Function to remove mobile-active from all other projects
+    const removeActiveStates = (
+      exceptThis: Element | null,
+      projectList: NodeListOf<Element>
+    ) => {
+      projectList.forEach((p) => {
+        if (p !== exceptThis) {
+          p.classList.remove("mobile-active");
+        }
+      });
+    };
+
+    projects.forEach((project) => {
+      // Use a named function for the event listener
+      const handleProjectClick = (event: Event) => {
+        // Stop propagation if a link inside the project is clicked
+        if ((event.target as HTMLElement).closest("a")) {
+          return;
+        }
+        // If the screen is small (mobile view)
+        if (window.innerWidth < 768) {
+          // If the clicked project is already active, deactivate it.
+          // Otherwise, activate it and deactivate others.
+          if (project.classList.contains("mobile-active")) {
+            project.classList.remove("mobile-active");
+          } else {
+            removeActiveStates(project, projects);
+            project.classList.add("mobile-active");
+          }
+        }
+      };
+
+      project.addEventListener("click", handleProjectClick);
+    });
+
+    // Also, if a click happens outside of any project, close all active ones.
+    document.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest(".group")) {
+        removeActiveStates(null, projects);
+      }
+    });
+  });
+</script>

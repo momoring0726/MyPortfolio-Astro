@@ -82,4 +82,24 @@
     background-size: 400% 400%;
     animation: animateGradient 8s ease infinite;
   }
+
+  .group.mobile-active
+    .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+
+  .group.mobile-active
+    .group-hover\:blur-sm {
+    filter: blur(4px);
+  }
+
+  .group.mobile-active
+    .group-hover\:brightness-60 {
+    filter: brightness(0.6);
+  }
+
+  .group.mobile-active
+    .group-hover\:opacity-100 {
+    opacity: 1;
+  }
 }
